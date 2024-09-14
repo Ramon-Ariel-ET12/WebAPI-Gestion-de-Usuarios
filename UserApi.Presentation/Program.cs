@@ -16,8 +16,9 @@ builder.Services.AddDbContext<UserApiDBContext>(options =>
 // Add Carter services
 builder.Services.AddCarter();
 
-// Add Service Manager xd
+// Add Service manager and Repository manager
 builder.Services.AddServiceManager();
+builder.Services.AddRepositoryManager();
 
 var app = builder.Build();
 
