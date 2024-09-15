@@ -11,3 +11,8 @@ public class UserApiDBContext : DbContext
     public DbSet<Rol> Rol { get; set; }
     public DbSet<UsuarioRol> UsuarioRol { get; set; }
 }
+
+// dotnet ef migrations add FirstMigration --context UserApiDBContext --project .\UserApi.Infrastructure\ --startup-project .\UserApi.Presentation\
+
+
+// dotnet ef database update --context UserApiDBContext --project .\UserApi.Infrastructure\ --startup-project .\UserApi.Presentation\
