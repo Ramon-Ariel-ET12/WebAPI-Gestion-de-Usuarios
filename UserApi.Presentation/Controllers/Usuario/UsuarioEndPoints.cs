@@ -1,7 +1,6 @@
 using Carter;
 using Microsoft.AspNetCore.Mvc;
 using UserApi.Application.Contracts.Services;
-using UserApi.Domain.Entities;
 
 namespace UserApi.Presentation.Controllers.Usuario;
 
@@ -13,9 +12,9 @@ public class UsuarioEndPoints : ICarterModule
     {
         app.MapPost("/api/Usuario", ([FromServices] IUsuarioService usuarioService, Domain.Entities.Usuario usuario) =>
         {
-            if (usuario == null || string.IsNullOrEmpty(usuario.Nombre) || string.IsNullOrEmpty(usuario.Email))
+            if (usuario.Nombre == null || usuario.Email == null || usuario.Contrasena == null)
             {
-                return Results.BadRequest();
+                return Results.BadRequest("Por favor, no deje campos vacios.");
             }
             usuarioService.Crear(usuario);
             return Results.Created();
@@ -51,14 +50,14 @@ public class UsuarioEndPoints : ICarterModule
                 return Results.NotFound();
             }
 
-            usuarioService.Modificar(usuario.IdUsuario, usuario);
+            usuarioService.Modificar(usuario);
             return Results.NoContent();
         });
 
         app.MapDelete("/api/Usuario/{IdUsuario}", ([FromServices] IUsuarioService usuarioService, int IdUsuario) =>
         {
             var exise = usuarioService.ObtenerUsuarioPorId(IdUsuario);
-            
+
             if (exise.Count == 0)
             {
                 return Results.NotFound();
