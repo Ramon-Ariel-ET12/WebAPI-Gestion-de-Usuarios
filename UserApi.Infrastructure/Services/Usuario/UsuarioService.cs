@@ -23,9 +23,9 @@ public class UsuarioService : IUsuarioService
         _Usuario.ElminarUsuario(IdUsuario);
     }
 
-    public void Modificar(int IdUsuario, Domain.Entities.Usuario usuario)
+    public void Modificar(Domain.Entities.Usuario usuario)
     {
-        _Usuario.ModificarUsuario(IdUsuario, usuario);
+        _Usuario.ModificarUsuario(usuario);
     }
 
     public List<Domain.Entities.Usuario> ObtenerUsuario()

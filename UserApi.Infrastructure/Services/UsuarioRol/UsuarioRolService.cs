@@ -11,23 +11,13 @@ public class UsuarioRolService : IUsuarioRolService
         _UsuarioRol = usuarioRolRepository;
     }
 
-    public void CrearPorIdRol(int IdRol, int IdUsuario)
+    public void Crear(int IdRol, int IdUsuario)
     {
-        _UsuarioRol.CrearPorIdRol(IdRol, IdUsuario);
+        _UsuarioRol.Crear(IdRol, IdUsuario);
     }
 
-    public void CrearPorIdUsuario(int IdUsuario, int IdRol)
+    public void Eliminar(int IdRol, int IdUsuario)
     {
-        _UsuarioRol.CrearPorIdUsuario(IdUsuario, IdRol);
-    }
-
-    public void EliminarPorIdRol(int IdRol, int IdUsuario)
-    {
-        _UsuarioRol.EliminarPorIdRol(IdRol, IdUsuario);
-    }
-
-    public void EliminarPorIdUsuario(int IdUsuario, int IdRol)
-    {
-        _UsuarioRol.EliminarPorIdUsuario(IdUsuario, IdRol);
+        _UsuarioRol.Eliminar(IdRol, IdUsuario);
     }
 }

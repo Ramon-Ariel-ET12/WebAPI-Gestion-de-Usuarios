@@ -20,9 +20,9 @@ public class RolService : IRolService
         _Rol.EliminarRol(IdRol);
     }
 
-    public void Modificar(int IdRol, Domain.Entities.Rol rol)
+    public void Modificar(Domain.Entities.Rol rol)
     {
-        _Rol.ModificarRol(IdRol, rol);
+        _Rol.ModificarRol(rol);
     }
 
     public List<Domain.Entities.Rol> ObtenerRol()
