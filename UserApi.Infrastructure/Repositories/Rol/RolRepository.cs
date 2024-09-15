@@ -27,9 +27,9 @@ public class RolRepository : IRolRepository
         }
     }
 
-    public void ModificarRol(int IdRol, Domain.Entities.Rol rol)
+    public void ModificarRol(Domain.Entities.Rol rol)
     {
-        var roles = _Rol.Rol.FirstOrDefault(x => x.IdRol == IdRol);
+        var roles = _Rol.Rol.FirstOrDefault(x => x.IdRol == rol.IdRol);
         if (roles != null)
         {
             roles.Nombre = rol.Nombre;

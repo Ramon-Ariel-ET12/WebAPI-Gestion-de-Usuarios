@@ -29,9 +29,9 @@ public class UsuarioRepository : IUsuarioRepository
         }
     }
 
-    public void ModificarUsuario(int IdUsuario, Domain.Entities.Usuario usuario)
+    public void ModificarUsuario(Domain.Entities.Usuario usuario)
     {
-        var usuarios = _Usuario.Usuario.FirstOrDefault(x => x.IdUsuario == IdUsuario);
+        var usuarios = _Usuario.Usuario.FirstOrDefault(x => x.IdUsuario == usuario.IdUsuario);
         if (usuarios != null)
         {
             usuarios.Email = usuario.Email;

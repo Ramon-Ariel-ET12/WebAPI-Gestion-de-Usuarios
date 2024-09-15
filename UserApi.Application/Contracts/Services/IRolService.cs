@@ -7,6 +7,6 @@ public interface IRolService
     void Crear(Rol rol);
     List<Rol> ObtenerRol();
     List<Rol> ObtenerRolPorId(int IdRol);
-    void Modificar(int IdRol, Rol rol);
+    void Modificar(Rol rol);
     void Eliminar(int IdRol);
 }

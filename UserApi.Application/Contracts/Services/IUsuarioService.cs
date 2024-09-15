@@ -7,6 +7,6 @@ public interface IUsuarioService
     void Crear(Usuario usuario);
     List<Usuario> ObtenerUsuario();
     List<Usuario> ObtenerUsuarioPorId(int IdUsuario);
-    void Modificar(int IdUsuario, Usuario usuario);
+    void Modificar(Usuario usuario);
     void Eliminar(int IdUsuario);
 }
