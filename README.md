@@ -1,5 +1,5 @@
 # WebAPI-Gestion-de-Usuarios
-> Trabajo para el profesor @jonathanvgms *jonathanvgms*
+> Trabajo para el profesor @jonathanvgms *jonathan velazquez*
 
 ## Contexto
 La empresa ABC posee múltiples aplicaciones web en donde cada una de ella gestiona sus usuarios de forma local e independiente. Se busca unificar los usuarios de todas las aplicaciones para que un único usuario pueda acceder a cada una de las aplicaciones con la misma credenciales.
@@ -30,6 +30,6 @@ Por lo cual especifica por cada entidad que endpoints se deben confeccionar y su
 3. Crear los controladores con endpoints para las acciones descritas en la tabla para cada uno de los objetos de dominio
 4. Verificar el correcto funcionamiento de cada endpoint desde Swagger
 5. Realizar pruebas de integración:
-6. Agregar y eliminar roles a usuarios
-7. Agregar y eliminar usuarios  a roles
-8. Subir código fuente del proyecto web a un repositorio github (se debe entregar únicamente el enlace al repositorio)
+   * Agregar y eliminar roles a usuarios
+   * Agregar y eliminar usuarios  a roles
+6. Subir código fuente del proyecto web a un repositorio github (se debe entregar únicamente el enlace al repositorio)
