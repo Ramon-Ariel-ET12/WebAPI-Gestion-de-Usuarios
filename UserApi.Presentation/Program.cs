@@ -5,24 +5,23 @@ using UserApi.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Configure the conection to PostgreSQL
-builder.Services.AddDbContext<UserApiDBContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("ABCDB")));
+builder.Services.AddDbContext<UserApiDBContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("Escuela")));
 
-// Add Carter services
 builder.Services.AddCarter();
-
-// Add Service manager and Repository manager
 builder.Services.AddServiceManager();
 builder.Services.AddRepositoryManager();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+var opciones = new DbContextOptionsBuilder<UserApiDBContext>();
+
+var context = new UserApiDBContext(opciones.Options);
+
+context.Database.Migrate();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -31,7 +30,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Use Carter
 app.MapCarter();
 
 app.Run();

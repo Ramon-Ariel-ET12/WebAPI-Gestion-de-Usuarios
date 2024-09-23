@@ -1,6 +1,86 @@
-@UserApi.Presentation_HostAddress = http://localhost:5218/swagger/
+@UserApi.Presentation_HostAddress = http://localhost:5218/api
 
-GET {{UserApi.Presentation_HostAddress}}/weatherforecast/
+
+###
+
+POST {{UserApi.Presentation_HostAddress}}/Usuario/
+Content-Type: application/json
+{
+    "idUsuario": 1,
+    "nombre": "Diego2",
+    "email": "Diegolgbt2@gmail.com",
+    "contrasena": "hola2",
+    "habilitado": false,
+    "fechaCreacion": "2024-08-26T00:00:00Z"
+}
+
+POST {{UserApi.Presentation_HostAddress}}/Rol/
+Content-Type: application/json
+{
+    "idRol": 1,
+    "nombre": "Maestro",
+    "habilitado": true,
+    "fechaCreacion": "2024-08-26T00:00:00Z"
+}
+
+POST {{UserApi.Presentation_HostAddress}}/rol/1/usuario/1
+Content-Type: application/json
+/*
+POST {{UserApi.Presentation_HostAddress}}/usuario/1/rol/1
+Content-Type: application/json
+*/
+
+###
+GET {{UserApi.Presentation_HostAddress}}/Usuarios/
 Accept: application/json
+
+GET {{UserApi.Presentation_HostAddress}}/Rol/
+Accept: application/json
+###
+
+PUT {{UserApi.Presentation_HostAddress}}/Usuario/1
+Content-Type: application/json
+{
+    "idUsuario": 1,
+    "nombre": "",
+    "email": "Luciano@gmail.com",
+    "contrasena": "Turnomañanafavoritodelprofe",
+    "habilitado": true,
+    "fechaCreacion": "2024-08-26T00:00:00Z"
+}
+PUT {{UserApi.Presentation_HostAddress}}/Rol/1
+Content-Type: application/json
+{
+    "idRol": 1,
+    "nombre": "",
+    "habilitado": false,
+    "fechaCreacion": "2024-08-26T00:00:00Z"
+}
+
+###
+
+GET {{UserApi.Presentation_HostAddress}}/Usuario/1
+Accept: application/json
+
+GET {{UserApi.Presentation_HostAddress}}/Rol/1
+Accept: application/json
+
+###
+
+
+DELETE {{UserApi.Presentation_HostAddress}}/Usuario/2
+Content-Type: application/json
+
+DELETE {{UserApi.Presentation_HostAddress}}/Rol/1
+Content-Type: application/json
+
+DELETE {{UserApi.Presentation_HostAddress}}/usuario/1/rol/1
+Content-Type: application/json
+
+/*
+DELETE {{UserApi.Presentation_HostAddress}}/rol/1/usuario/1
+Content-Type: application/json
+*/
+
 
 ###

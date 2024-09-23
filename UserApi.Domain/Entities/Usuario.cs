@@ -11,13 +11,13 @@ public class Usuario
     public int IdUsuario { get; set; }
     [Required]
     [StringLength(50)]
-    public string Nombre { get; set; }
+    public string Nombre { get; set; } = string.Empty;
     [Required]
     [StringLength(50)]
-    public string Email { get; set; }
+    public string Email { get; set; } = string.Empty;
     [Required]
     [StringLength(50)]
-    public string Contrasena { get; set; }
+    public string Contrasena { get; set; } = string.Empty;
     [Required]
     public bool Habilitado { get; set; }
     [Required]

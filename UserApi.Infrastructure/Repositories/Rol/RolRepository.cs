@@ -32,7 +32,6 @@ public class RolRepository : IRolRepository
         var roles = _Rol.Rol.FirstOrDefault(x => x.IdRol == rol.IdRol);
         if (roles != null)
         {
-            roles.Nombre = rol.Nombre;
             roles.Habilitado = rol.Habilitado;
             _Rol.SaveChanges();
         }

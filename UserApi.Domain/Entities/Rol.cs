@@ -12,7 +12,7 @@ public class Rol
     public int IdRol { get; set; }
     [Required]
     [StringLength(50)]
-    public string? Nombre { get; set; }
+    public string? Nombre { get; set; } = string.Empty;
     [Required]
     public bool Habilitado { get; set; }
     [Required]
