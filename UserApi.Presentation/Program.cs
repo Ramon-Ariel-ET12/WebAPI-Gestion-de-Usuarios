@@ -14,13 +14,15 @@ builder.Services.AddCarter();
 builder.Services.AddServiceManager();
 builder.Services.AddRepositoryManager();
 
-var app = builder.Build();
-
 var opciones = new DbContextOptionsBuilder<UserApiDBContext>();
+
+opciones.UseNpgsql(builder.Configuration.GetConnectionString("Escuela"));
 
 var context = new UserApiDBContext(opciones.Options);
 
 context.Database.Migrate();
+
+var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
