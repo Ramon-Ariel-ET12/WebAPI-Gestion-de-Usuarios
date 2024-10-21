@@ -1,6 +1,6 @@
 services:
   db:
-    image: postgres:latest
+    image: postgres:17.0
     restart: always
     environment:
       - POSTGRES_PASSWORD=pass123
@@ -13,6 +13,6 @@ services:
     environment:
       - ConnectionStrings__Escuela=Server=db;Database=Escuela;Username=postgres;Password=pass123
     ports:
-      - 100:5000
+      - 5000:5000
     depends_on:
       - db
