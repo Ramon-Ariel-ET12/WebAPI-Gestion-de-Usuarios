@@ -1,5 +1,5 @@
 # WebAPI-Gestion-de-Usuarios
-> Trabajo para el profesor @jonathanvgms *jonathan velazquez*
+> Trabajo para el profesor [@jonathanvgms *jonathan velazquez*](https://github.com/jonathanvgms)
 
 ## Contexto
 La empresa ABC posee múltiples aplicaciones web en donde cada una de ella gestiona sus usuarios de forma local e independiente. Se busca unificar los usuarios de todas las aplicaciones para que un único usuario pueda acceder a cada una de las aplicaciones con la misma credenciales.
