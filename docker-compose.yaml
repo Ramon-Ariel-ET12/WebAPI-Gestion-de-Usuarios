@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=pass123
+    ports:
+      - 5001:5432
+      
+  webapi:
+    image: ramonarielet12/webapiuser
+    restart: always
+    environment:
+      - ConnectionStrings__Escuela=Server=db;Database=Escuela;Username=postgres;Password=pass123
+    ports:
+      - 100:5000
+    depends_on:
+      - db
